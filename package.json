@@ -1,0 +1,55 @@
+{
+  "name": "mylib",
+  "version": "0.1.0",
+  "description": "A highly configurable data table component.",
+  "main": "./dist/mylib.cjs.js",
+  "browser": "./dist/mylib.umd.min.js",
+  "module": "./dist/mylib.esm.js",
+  "types": "./dist/mylib.d.ts",
+  "exports": {
+    "./constable.cjs.js": "./dist/mylib.cjs.js",
+    "./constable.umd.min.js": "./dist/mylib.umd.min.js",
+    "./constable.esm.js": "./dist/mylib.esm.js",
+    "./constable.d.ts": "./dist/mylib.d.ts"
+  },
+  "scripts": {
+    "build": "rollup -c ./rollup.config.mjs",
+    "dev": "rollup -wc ./rollup.config.mjs",
+    "docs": "mkdir -p dist/docs && jsdoc src -c jsdoc.json -r -R ./README.md -d dist/docs/",
+    "test": "jest",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "<Repo URL HERE>"
+  },
+  "keywords": [
+    "mylib"
+  ],
+  "author": "YOUR NAME <YOUREMAIL@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "YOUR BUG REPO URL HERE"
+  },
+  "homepage": "YOUR HOMEPAGE URL HERE",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/jest": "^29.5.12",
+    "better-docs": "^2.7.3",
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0",
+    "jsdoc": "^4.0.2",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.9.6",
+    "rollup-plugin-dts": "^6.1.0",
+    "ts-jest": "^29.1.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
+}
