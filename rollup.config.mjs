@@ -6,25 +6,25 @@ import terser from "@rollup/plugin-terser";
 
 export default [
   {
-    input: "src/mylib.ts",
+    input: "src/concore.ts",
     output: [
       {
-        file: "dist/mylib.umd.js",
+        file: "dist/concore.umd.js",
         format: "umd",
-        name: "mylib",
+        name: "concore",
       },
       {
-        file: "dist/mylib.umd.min.js",
+        file: "dist/concore.umd.min.js",
         format: "umd",
-        name: "mylib",
+        name: "concore",
         plugins: [terser()],
       },
       {
-        file: "dist/mylib.cjs.js",
+        file: "dist/concore.cjs.js",
         format: "cjs",
       },
       {
-        file: "dist/mylib.es.js",
+        file: "dist/concore.es.js",
         format: "es",
       },
     ],
@@ -38,8 +38,8 @@ export default [
     external: [],
   },
   {
-    input: './dist/dts/src/mylib.d.ts',
-    output: [{ file: 'dist/mylib.d.ts', format: 'es' }],
+    input: './dist/dts/src/concore.d.ts',
+    output: [{ file: 'dist/concore.d.ts', format: 'es' }],
     plugins: [dts()],
   },
 ];
